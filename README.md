@@ -6,3 +6,9 @@ find a file:
 ```
 find . -name "networkedge*" -print
 ```
+
+
+### find and Delete directories built more than 3 days.
+```
+find . -depth -type d ! -name "conda" -mtime +3 -exec rm -rf {} \;
+```
