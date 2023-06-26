@@ -12,3 +12,8 @@ find . -name "networkedge*" -print
 ```
 find . -depth -type d ! -name "conda" -mtime +3 -exec rm -rf {} \;
 ```
+
+### check how many cores running on GCP.
+```
+squeue | grep R | wc
+```
