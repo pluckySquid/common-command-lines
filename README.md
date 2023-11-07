@@ -21,3 +21,7 @@ squeue | grep R | wc
 ```
 find work -mindepth 2 -type d -cmin -1230 -exec rm -r {} \;
 ```
+## cancle all the jobs:
+```
+squeue --me -h -o "%i" | xargs cancel
+```
