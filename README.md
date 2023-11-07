@@ -17,3 +17,7 @@ find . -depth -type d ! -name "conda" -mtime +3 -exec rm -rf {} \;
 ```
 squeue | grep R | wc
 ```
+## remove recent folders:
+```
+find work -mindepth 2 -type d -cmin -1230 -exec rm -r {} \;
+```
